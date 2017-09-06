@@ -258,19 +258,19 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: 'basicBot',
-            language: 'english',
+            botName: '-gαℓαxy',
+            language: 'portuguese',
             chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
             scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
-            startupEmoji: false, // true or false
+            startupEmoji: true, // true or false
             autowoot: true,
             autoskip: false,
             smartSkip: true,
             cmdDeletion: true,
-            maximumAfk: 120,
+            maximumAfk: 480,
             afkRemoval: true,
             maximumDc: 60,
             bouncerPlus: true,
@@ -303,19 +303,19 @@
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
             motdEnabled: false,
-            motdInterval: 5,
+            motdInterval: 1,
             motd: 'Temporary Message of the Day',
             filterChat: true,
             etaRestriction: false,
             welcome: true,
             opLink: null,
-            rulesLink: null,
+            rulesLink: true,
             themeLink: null,
-            fbLink: null,
-            youtubeLink: null,
-            website: null,
+            fbLink: true,
+            youtubeLink: true,
+            website: true,
             intervalMessages: [],
-            messageInterval: 5,
+            messageInterval: 1,
             songstats: true,
             commandLiteral: '!',
             blacklists: {
@@ -2404,7 +2404,7 @@
                     else {
                         if (typeof basicBot.settings.fbLink === 'string')
                             API.sendChat(subChat(basicBot.chat.facebook, {
-                                link: basicBot.settings.fbLink
+                                link: https://www.facebook.com/groups/1641078129240351/
                             }));
                     }
                 }
@@ -3316,7 +3316,7 @@
                     else {
                         if (typeof basicBot.settings.rulesLink === 'string')
                             return API.sendChat(subChat(basicBot.chat.roomrules, {
-                                link: basicBot.settings.rulesLink
+                                link: https://catharsisclub.wixsite.com/home/regras
                             }));
                     }
                 }
@@ -4042,7 +4042,7 @@
             },
 
             websiteCommand: {
-                command: 'website',
+                command: 'site',
                 rank: 'user',
                 type: 'exact',
                 functionality: function(chat, cmd) {
@@ -4051,7 +4051,7 @@
                     else {
                         if (typeof basicBot.settings.website === 'string')
                             API.sendChat(subChat(basicBot.chat.website, {
-                                link: basicBot.settings.website
+                                link: https://catharsisclub.wixsite.com/home
                             }));
                     }
                 }
