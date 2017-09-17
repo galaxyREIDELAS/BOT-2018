@@ -11,7 +11,7 @@ Email enquiries: [hi[at]benzi[dot]io](mailto:hi@benzi.io)
 Bookmark the following code. To run the bot, click the bookmark.
 
 ```
-javascript:(function(){$.getScript('https://rawgit.com/bscBot/source/master/basicBot.js');})();
+javascript:(function(){$.getScript('https://github.com/GalaxyDELAS/BOT-2018.git');})();
 ```
 
 If this does not work, go to [basicBot.js](https://raw.githubusercontent.com/basicBot/source/master/basicBot.js) and copy paste its content into your console (accessible in chrome by pressing F12) when on plug.dj in your community.
