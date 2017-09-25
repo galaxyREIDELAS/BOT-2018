@@ -260,8 +260,8 @@
         settings: {
             botName: '-gαℓαxy',
             language: 'portuguese',
-            chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
-            scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
+            chatLink: 'https://github.com/GalaxyDELAS/BOT-2018/edit/master/basicBot.js/en.json',
+            scriptLink: 'https://github.com/GalaxyDELAS/BOT-2018/edit/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -2404,7 +2404,7 @@
                     else {
                         if (typeof basicBot.settings.fbLink === 'string')
                             API.sendChat(subChat(basicBot.chat.facebook, {
-                                link: https://www.facebook.com/groups/1641078129240351/
+                                link: null
                             }));
                     }
                 }
