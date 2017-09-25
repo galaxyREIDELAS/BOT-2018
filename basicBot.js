@@ -3316,7 +3316,7 @@
                     else {
                         if (typeof basicBot.settings.rulesLink === 'string')
                             return API.sendChat(subChat(basicBot.chat.roomrules, {
-                                link: https://catharsisclub.wixsite.com/home/regras
+                                link: null
                             }));
                     }
                 }
@@ -4051,7 +4051,7 @@
                     else {
                         if (typeof basicBot.settings.website === 'string')
                             API.sendChat(subChat(basicBot.chat.website, {
-                                link: https://catharsisclub.wixsite.com/home
+                                link: null
                             }));
                     }
                 }
