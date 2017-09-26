@@ -264,13 +264,13 @@
             scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
-            startupVolume: 0, // 0-100
+            startupVolume: 100, // 0-100
             startupEmoji: true, // true or false
             autowoot: true,
             autoskip: false,
             smartSkip: true,
             cmdDeletion: true,
-            maximumAfk: 480,
+            maximumAfk: 420,
             afkRemoval: true,
             maximumDc: 60,
             bouncerPlus: true,
@@ -309,11 +309,11 @@
             etaRestriction: false,
             welcome: true,
             opLink: null,
-            rulesLink: true,
+            rulesLink: null,
             themeLink: null,
-            fbLink: true,
+            fbLink: null,
             youtubeLink: true,
-            website: true,
+            website: null,
             intervalMessages: [],
             messageInterval: 1,
             songstats: true,
