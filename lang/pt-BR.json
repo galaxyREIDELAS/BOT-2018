@@ -224,6 +224,6 @@
     "thorNotClose": "\/me @%%NAME%% voc\u00ea n\u00e3o \u00e9 d\u00edgno nem de chegar perto do martelo!",
     "thorcd": "\/me @%%NAME%% voc\u00ea pode tentar levantar o martelo em %%TIME%% minutos.",
     "thorWorthy": "\/me @%%NAME%% voc\u00ea \u00e9 d\u00edgno do martelo :hammer:. Parab\u00e9ns!",
-    "prop": "@%%NAMEFROM%% disse, \"%%PROP%%\" para @%%DJ%%.",
+    "props": "@%%NAMEFROM%% disse, \"%%PROP%%\" para @%%DJ%%.",
     "thorNotWorthy": "\/me @%%NAME%% voc\u00ea n\u00e3o \u00e9 d\u00edgno do martelo."
 }
