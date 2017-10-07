@@ -290,6 +290,7 @@
             usercommandsEnabled: true,
             thorCommand: true,
             thorCooldown: 10,
+            props: true,
             skipPosition: 3,
             skipReasons: [
                 ['theme', 'This song does not fit the room theme. '],
