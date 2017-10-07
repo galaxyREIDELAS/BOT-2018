@@ -3179,6 +3179,47 @@
                     }
                 }
             },
+         
+            propsCommand: {
+                command: 'props',
+                rank: 'user',
+                type: 'startsWith',
+                getProps: function(chat) {
+                    var c = Math.floor(Math.random() * basicBot.chat.Props.length);
+                    return basicBot.chat.Props[c];
+                },
+                functionality: function(chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(basicBot.chat.Props);
+                            return false;
+                        } else {
+                            var name = msg.substring(space + 2);
+                            var user = basicBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat(subChat(basicBot.chat.nouserProps, {
+                                    name: name
+                                }));
+                            } else if (user.username === chat.un) {
+                                return API.sendChat(subChat(basicBot.chat.selfProps, {
+                                    name: name
+                                }));
+                            } else {
+                                return API.sendChat(subChat(basicBot.chat.Props, {
+                                    nameto: user.username,
+                                    namefrom: chat.un,
+                                    Props: this.getProps()
+                                }));
+                            }
+                        }
+                    }
+                }
+            },
 
             pingCommand: {
                 command: 'ping',
