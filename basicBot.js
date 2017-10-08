@@ -305,7 +305,7 @@
             motdEnabled: false,
             motdInterval: 5,
             motd: 'Temporary Message of the Day',
-            filterChat: false,
+            filterChat: true,
             etaRestriction: false,
             welcome: true,
             opLink: null,
