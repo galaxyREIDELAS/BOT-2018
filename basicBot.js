@@ -4059,7 +4059,7 @@
                     else {
                         if (typeof basicBot.settings.website === 'string')
                             API.sendChat(subChat(basicBot.chat.website, {
-                                link: basicBot.settings.website
+                                link: https://catharsisclub.wixsite.com/home
                             }));
                     }
                 }
