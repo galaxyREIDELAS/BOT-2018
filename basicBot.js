@@ -2717,31 +2717,6 @@
                 }
             },
          
-            kissesCommand: {
-                command: 'kiss',
-                rank: 'user',
-                type: 'startsWith',
-                getCookie: function(chat) {
-                    var c = Math.floor(Math.random() * basicBot.chat.kisses.length);
-                    return basicBot.chat.kisses[c];
-                },
-                functionality: function(chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
-                    else {
-                        var msg = chat.message;
-
-                                return API.sendChat(subChat(basicBot.chat.kiss, {
-                                    nameto: user.username,
-                                    namefrom: chat.un,
-                                    cookie: this.getkiss()
-                                }));
-                            }
-                        }
-                    }
-                }
-            },
-        
             languageCommand: {
                 command: 'language',
                 rank: 'manager',
