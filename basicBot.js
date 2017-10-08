@@ -309,7 +309,7 @@
             etaRestriction: false,
             welcome: true,
             opLink: null,
-            rulesLink: null,
+            rulesLink: 'https://catharsisclub.wixsite.com/home/regras',
             themeLink: null,
             fbLink: null,
             youtubeLink: null,
@@ -3317,6 +3317,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
                         if (typeof basicBot.settings.rulesLink === 'string')
+                            return API.sendChat("Encontre as regras aqui https://catharsisclub.wixsite.com/home/regras :smiley:
                             return API.sendChat(subChat(basicBot.chat.roomrules, {
                                 link: basicBot.settings.rulesLink
                             }));
