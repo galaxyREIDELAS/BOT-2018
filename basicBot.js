@@ -284,7 +284,7 @@
             voteSkipLimit: 10,
             historySkip: false,
             timeGuard: true,
-            maximumSongLength: 7,
+            maximumSongLength: 10,
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
@@ -309,11 +309,11 @@
             etaRestriction: false,
             welcome: true,
             opLink: null,
-            rulesLink: 'https://catharsisclub.wixsite.com/home/regras',
+            rulesLink: null,
             themeLink: null,
             fbLink: null,
             youtubeLink: null,
-            website: true,
+            website: null,
             intervalMessages: [],
             messageInterval: 2,
             songstats: true,
@@ -4059,7 +4059,7 @@
                     else {
                         if (typeof basicBot.settings.website === 'string')
                             API.sendChat(subChat(basicBot.chat.website, {
-                                link: https://catharsisclub.wixsite.com/home
+                                link: basicBot.settings.website
                             }));
                     }
                 }
