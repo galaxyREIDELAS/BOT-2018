@@ -196,20 +196,20 @@
         status: false,
         name: 'EDM & Indie',
         loggedInID: null,
-        scriptLink: 'https://cdn.database-ammbr.tk/bot/edm-indie/loader.js',
+        scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
         cmdLink: '',
-        chatLink: 'https://cdn.database-ammbr.tk/bot/edm-indie/Indielang.php',
+        chatLink: 'https://rawgit.com/GalaxyDELAS/BOT-2018/master/lang/pt-BR.json',
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: 'EDM & Indie',
+            botName: '-gαℓαxy',
             language: 'portuguese',
-            chatLink: 'https://cdn.database-ammbr.tk/bot/edm-indie/Indielang.php',
-            scriptLink: 'https://cdn.database-ammbr.tk/bot/edm-indie/loader.js',
+            chatLink: 'https://rawgit.com/GalaxyDELAS/BOT-2018/master/lang/pt-BR.json',
+            scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
-            startupCap: 1, // 1-200
+            startupCap: 1, // 70-200
             startupVolume: 0, // 0-100
             startupEmoji: false, // true or false
             ss: false,
