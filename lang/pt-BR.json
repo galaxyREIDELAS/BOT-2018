@@ -147,7 +147,9 @@
    "greyuser":"Apenas Seguranças ou superiores podem usar o bot.",
    "bouncer":"O bot não pode mover pessoas na fila de espera quando usado por um bouncer.",
    "online":"/me %%BOTNAME%% v%%VERSION%% online!",
-   "welcome":"Que bom te ver por aqui %%NAME%%! Seja muito bem-vindo(a) :green_heart: "
+   "welcome1":":jack_o_lantern:Doçuras ou Travessuras?:ghost: Bem vindo(a) %%NAME%%! ao evento de Halloween da EDM & Indie!",
+   "welcome":"Que bom te ver por aqui %%NAME%%! Seja muito bem-vindo(a) :green_heart: ",
+   "welcomeback1":":ghost:Bem Vindo(a) de volta %%NAME%%! ao evento de Halloween da EDM & Indie!:jack_o_lantern:",
    "welcomeback":"Bem Vindo(a) de volta %%NAME%%! :green_heart: ",
    "songknown":"@%%NAME%%, essa música está no histórico.",
    "notavailable":"/me @%%NAME%%, a música que você tocou não está disponível.",
