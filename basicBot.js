@@ -209,9 +209,9 @@
             chatLink: 'https://rawgit.com/GalaxyDELAS/BOT-2018/master/lang/pt-BR.json',
             scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
-            startupCap: 1, // 70-200
-            startupVolume: 0, // 0-100
-            startupEmoji: false, // true or false
+            startupCap: 1, // 1-200
+            startupVolume: 70, // 0-100
+            startupEmoji: true, // true or false
             ss: false,
             ed: false,
             autoroletaEnabled: false,
