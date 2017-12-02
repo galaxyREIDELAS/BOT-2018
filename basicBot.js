@@ -186,15 +186,15 @@
     };
 
     var botCreator = 'Yemasthui';
-    var botMaintainer = '-DATABASE-';
-    var botCreatorIDs = [3851534, 4105209, 3926149, 5401598];
-    var botHostIDs = [5401598];
-    var botRDJIDs = [31403444];
+    var botMaintainer = '-gαℓαxy';
+    var botCreatorIDs = [12601578, 000000, 000000, 000000];
+    var botHostIDs = [000000];
+    var botRDJIDs = [000000];
 
     var basicBot = {
-        version: '4.1 (31/10)',
+        version: '8.0 (10/10)',
         status: false,
-        name: 'EDM & Indie',
+        name: '-gαℓαxy',
         loggedInID: null,
         scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
         cmdLink: '',
