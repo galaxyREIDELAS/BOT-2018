@@ -43,7 +43,7 @@
       "Desculpa, eu não sou daqui mas queria saber, onde fica a estrada que leva para o seu coração?",
       "Existe um vazio no meu coração que tem as suas medidas. Quer entrar?"
    ],
-   "mito":[  
+   "react":[  
       "Que música mais deliciosa que uma Marmitex!",
       "Sua música é como a Eduarda Correa, profissional usando hack no requebro!",
       "Q U A L I D A D E & S I N C R O N I A",
@@ -321,6 +321,6 @@
    "othercommands":"@%%NAME%% Não temos !thor, temos !dj ",
    "say":":email: Comunicado: %%QUESTION%% [ @everyone ]",
    "setInterval":"Intervalo de mensagens definido para: %%POS%%",
-   "mitoChat":"[ @%%NAMEFROM%% ] relatou, \"%%MITO%%\" @%%NAMETO%%",
+   "reactChat":"[ @%%NAMEFROM%% ] relatou, \"%%REACT%%\" @%%NAMETO%%",
    "lixoChat":"[ @%%NAMEFROM%% ] relatou, \"%%LIXO%%\" @%%NAMETO%%"
 }
