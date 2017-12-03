@@ -148,7 +148,7 @@
    "bouncer":"O bot não pode mover pessoas na fila de espera quando usado por um bouncer.",
    "online":"/me %%BOTNAME%% v%%VERSION%% online!",
    "welcome1":":jack_o_lantern:Doçuras ou Travessuras?:ghost: Bem vindo(a) %%NAME%%! ao evento de Halloween da EDM & Indie!",
-   "welcome":"Que bom te ver por aqui %%NAME%%! Seja muito bem-vindo(a) :blue_heart: ",
+   "welcome":"Olá %%NAME%%! Seja muito bem-vindo(a) :revolving_hearts: ",
    "welcomeback1":":ghost:Bem Vindo(a) de volta %%NAME%%! ao evento de Halloween da EDM & Indie!:jack_o_lantern:",
    "welcomeback":"Bem Vindo(a) de volta %%NAME%%! :blue_heart: ",
    "songknown":"@%%NAME%%, essa música está no histórico.",
