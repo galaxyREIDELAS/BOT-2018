@@ -4226,7 +4226,7 @@
                                 oldTime = 0,
                                 usedDrop = false,
                                 indexArrUsedDrop,
-                                DropCd = false,
+                                dropCd = false,
                                 timeInMinutes = 0,
                                 worthyAlg = Math.floor(Math.random() * 10) + 1,
                                 worthy = worthyAlg == 10 ? true : false;
@@ -4246,19 +4246,19 @@
                                 for (var i = 0; i < basicBot.room.usersUsedDrop.length; i++) {
                                     if (basicBot.room.usersUsedDrop[i].id == id) {
                                         oldTime = basicBot.room.usersUsedDrop[i].time;
-                                        useddrop = true;
-                                        indexArrUseddrop = i;
+                                        usedDrop = true;
+                                        indexArrUsedDrop = i;
                                     }
                                 }
 
-                                if (useddrop) {
+                                if (usedDrop) {
                                     timeInMinutes = (basicBot.settings.dropCooldown + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
                                     dropCd = timeInMinutes > 0 ? true : false;
                                     if (dropCd == false)
-                                        basicBot.room.usersUsedDrop.splice(indexArrUseddrop, 1);
+                                        basicBot.room.usersUsedDrop.splice(indexArrUsedDrop, 1);
                                 }
 
-                                if (dropCd == false || useddrop == false) {
+                                if (dropCd == false || usedDrop == false) {
                                     var user = {
                                         id: id,
                                         time: Date.now()
