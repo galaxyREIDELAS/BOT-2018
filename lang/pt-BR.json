@@ -318,7 +318,7 @@
    "edTitle":"Robô ED",
    "autoroleta":"Auto roleta",
    "setautoroleta":"Intervalo do AutoRoleta alterado para: %%AUR%% musicas.",
-   "othercommands":"@%%NAME%% Não temos !thor/!jailson, temos !requebro ",
+   "othercommands":"@%%NAME%% Não temos !thor, temos !dj ",
    "say":":email: Comunicado: %%QUESTION%% [ @everyone ]",
    "setInterval":"Intervalo de mensagens definido para: %%POS%%",
    "mitoChat":"[ @%%NAMEFROM%% ] relatou, \"%%MITO%%\" @%%NAMETO%%",
