@@ -2322,13 +2322,13 @@
                 }
             },
 
-            mitoCommand: {
-                command: 'mito',
+            reactCommand: {
+                command: 'react',
                 rank: 'user',
                 type: 'startsWith',
-                getMito: function(chat) {
-                    var c = Math.floor(Math.random() * basicBot.chat.mito.length);
-                    return basicBot.chat.mito[c];
+                getReact: function(chat) {
+                    var c = Math.floor(Math.random() * basicBot.chat.react.length);
+                    return basicBot.chat.react[c];
                 },
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
@@ -2337,10 +2337,10 @@
                         var dj = API.getDJ();
                         var name = dj.username;
 
-                        API.sendChat(subChat(basicBot.chat.mitoChat, {
+                        API.sendChat(subChat(basicBot.chat.reactChat, {
                                     nameto: dj.username,
                                     namefrom: chat.un,
-                                    mito: this.getMito()
+                                    react: this.getReact()
                                 }));
                     }
                 }
