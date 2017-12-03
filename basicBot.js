@@ -4091,7 +4091,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        API.sendChat('Temas Destaque: - Eletronica, videos NSFW são proibidos :no_entry_sign:');
+                        API.sendChat('Temas Destaque: Eletronica, videos NSFW são proibidos :no_entry_sign:');
                     }
                 }
             },
@@ -4117,7 +4117,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        API.sendChat('Proibido Tocar: Sertanejo -  K-POP - Arrocha - AxeMusic - Bailão - Forró - Frevo - Lambada - Brega - Samba - Metal - Sertanejo ');
+                        API.sendChat('Proibido Tocar: Sertanejo -  K-POP - Arrocha - AxeMusic - Bailão - Forró - Frevo - Lambada - Brega - Samba - Metal ');
                     }
                 }
             },
