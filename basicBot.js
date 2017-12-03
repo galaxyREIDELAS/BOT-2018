@@ -4091,7 +4091,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        API.sendChat('Temas Destaque: EDM - Alternative/INDIE ðŸ”žVÃ­deos NSFW sÃ£o proibidosðŸ”ž');
+                        API.sendChat('Temas Destaque: - Eletronica, videos NSFW são proibidos :no_entry_sign:');
                     }
                 }
             },
@@ -4104,7 +4104,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        API.sendChat('Temas AceitÃ¡veis: POP - Contemporary R&B - Rap/HipHopAternativo - R&B - PopRap - MPB - Rock');
+                        API.sendChat('Temas Aceitáveis: Eletronica - Pop - Rap - EDM - Reggae - MPB - Rock - Indie ');
                     }
                 }
             },
@@ -4117,7 +4117,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        API.sendChat('Proibido Tocar: Sertanejo - FUNK - K-POP - Arrocha - AxÃ© Music - BailÃ£o - ForrÃ³ - Frevo - Lambada - Brega - Samba - Metal e qualquer tipo de rap/hip hop nacional que nÃ£o seja lÃ­rico');
+                        API.sendChat('Proibido Tocar: Sertanejo -  K-POP - Arrocha - AxeMusic - Bailão - Forró - Frevo - Lambada - Brega - Samba - Metal - Sertanejo ');
                     }
                 }
             },
@@ -4209,24 +4209,24 @@
                 }
             },
 
-            beatsCommand: {
-                command: 'beats',
+            dropCommand: {
+                command: 'drop',
                 rank: 'user',
                 type: 'exact',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        if (basicBot.settings.beatsCommand) {
+                        if (basicBot.settings.dropCommand) {
                             var id = chat.uid,
                                 isDj = API.getDJ().id == id ? true : false,
                                 from = chat.un,
                                 djlist = API.getWaitList(),
                                 inDjList = false,
                                 oldTime = 0,
-                                usedBeats = false,
-                                indexArrUsedBeats,
-                                beatsCd = false,
+                                usedDrop = false,
+                                indexArrUsedDrop,
+                                DropCd = false,
                                 timeInMinutes = 0,
                                 worthyAlg = Math.floor(Math.random() * 10) + 1,
                                 worthy = worthyAlg == 10 ? true : false;
@@ -4243,36 +4243,36 @@
                             }
 
                             if (inDjList) {
-                                for (var i = 0; i < basicBot.room.usersUsedBeats.length; i++) {
-                                    if (basicBot.room.usersUsedBeats[i].id == id) {
-                                        oldTime = basicBot.room.usersUsedBeats[i].time;
-                                        usedBeats = true;
-                                        indexArrUsedBeats = i;
+                                for (var i = 0; i < basicBot.room.usersUsedDrop.length; i++) {
+                                    if (basicBot.room.usersUsedDrop[i].id == id) {
+                                        oldTime = basicBot.room.usersUsedDrop[i].time;
+                                        useddrop = true;
+                                        indexArrUseddrop = i;
                                     }
                                 }
 
-                                if (usedBeats) {
-                                    timeInMinutes = (basicBot.settings.beatsCooldown + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
-                                    beatsCd = timeInMinutes > 0 ? true : false;
-                                    if (beatsCd == false)
-                                        basicBot.room.usersUsedBeats.splice(indexArrUsedBeats, 1);
+                                if (useddrop) {
+                                    timeInMinutes = (basicBot.settings.dropCooldown + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
+                                    dropCd = timeInMinutes > 0 ? true : false;
+                                    if (dropCd == false)
+                                        basicBot.room.usersUsedBeats.splice(indexArrUseddrop, 1);
                                 }
 
-                                if (beatsCd == false || usedBeats == false) {
+                                if (dropCd == false || useddrop == false) {
                                     var user = {
                                         id: id,
                                         time: Date.now()
                                     };
-                                    basicBot.room.usersUsedBeats.push(user);
+                                    basicBot.room.usersUsedDrop.push(user);
                                 }
                             }
 
                             if (!inDjList) {
-                                return API.sendChat(subChat(basicBot.chat.beatsNotClose, {
+                                return API.sendChat(subChat(basicBot.chat.dropNotClose, {
                                     name: from
                                 }));
-                            } else if (beatsCd) {
-                                return API.sendChat(subChat(basicBot.chat.beatscd, {
+                            } else if (dropCd) {
+                                return API.sendChat(subChat(basicBot.chat.dropcd, {
                                     name: from,
                                     time: timeInMinutes
                                 }));
@@ -4281,13 +4281,13 @@
                             if (worthy) {
                                 if (API.getWaitListPosition(id) != 0)
                                     basicBot.userUtilities.moveUser(id, 3, false);
-                                API.sendChat(subChat(basicBot.chat.beatsWorthy, {
+                                API.sendChat(subChat(basicBot.chat.dropWorthy, {
                                     name: from
                                 }));
                             } else {
                                 if (API.getWaitListPosition(id) != djlist.length - 1)
                                     basicBot.userUtilities.moveUser(id, djlist.length, false);
-                                API.sendChat(subChat(basicBot.chat.beatsNotWorthy, {
+                                API.sendChat(subChat(basicBot.chat.dropNotWorthy, {
                                     name: from
                                 }));
                             }
