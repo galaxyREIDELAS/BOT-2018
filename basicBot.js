@@ -394,8 +394,8 @@
 					API.sendChat(subChat(basicBot.chat.winnerpickedpp, {name: name}));
 				}
 			},
-            usersUsedRequebro: [],
-            usersUsedBeats: []
+            usersUsedDj: [],
+            usersUsedDrop: []
         },
         User: function(id, name) {
             this.id = id;
