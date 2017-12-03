@@ -4255,7 +4255,7 @@
                                     timeInMinutes = (basicBot.settings.dropCooldown + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
                                     dropCd = timeInMinutes > 0 ? true : false;
                                     if (dropCd == false)
-                                        basicBot.room.usersUsedBeats.splice(indexArrUseddrop, 1);
+                                        basicBot.room.usersUsedDrop.splice(indexArrUseddrop, 1);
                                 }
 
                                 if (dropCd == false || useddrop == false) {
