@@ -4139,7 +4139,7 @@
                                 oldTime = 0,
                                 usedDj = false,
                                 indexArrUsedDj,
-                                DjCd = false,
+                                djCd = false,
                                 timeInMinutes = 0,
                                 worthyAlg = Math.floor(Math.random() * 10) + 1,
                                 worthy = worthyAlg == 10 ? true : false;
@@ -4159,19 +4159,19 @@
                                 for (var i = 0; i < basicBot.room.usersUsedDj.length; i++) {
                                     if (basicBot.room.usersUsedDj[i].id == id) {
                                         oldTime = basicBot.room.usersUsedDj[i].time;
-                                        useddj = true;
-                                        indexArrUseddj = i;
+                                        usedDj = true;
+                                        indexArrUsedDj = i;
                                     }
                                 }
 
-                                if (useddj) {
+                                if (usedDj) {
                                     timeInMinutes = (basicBot.settings.djCooldown + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
                                     djCd = timeInMinutes > 0 ? true : false;
                                     if (djCd == false)
                                         basicBot.room.usersUsedDj.splice(indexArrUsedDj, 1);
                                 }
 
-                                if (djCd == false || useddj == false) {
+                                if (djCd == false || usedDj == false) {
                                     var user = {
                                         id: id,
                                         time: Date.now()
@@ -4208,7 +4208,6 @@
                     }
                 }
             },
-
             dropCommand: {
                 command: 'drop',
                 rank: 'user',
