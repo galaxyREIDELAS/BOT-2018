@@ -4122,24 +4122,24 @@
                 }
             },
 
-            requebroCommand: {
-                command: 'requebro',
+            djCommand: {
+                command: 'dj',
                 rank: 'user',
                 type: 'exact',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        if (basicBot.settings.requebroCommand) {
+                        if (basicBot.settings.djCommand) {
                             var id = chat.uid,
                                 isDj = API.getDJ().id == id ? true : false,
                                 from = chat.un,
                                 djlist = API.getWaitList(),
                                 inDjList = false,
                                 oldTime = 0,
-                                usedRequebro = false,
-                                indexArrUsedRequebro,
-                                requebroCd = false,
+                                usedDj = false,
+                                indexArrUsedDj,
+                                DjCd = false,
                                 timeInMinutes = 0,
                                 worthyAlg = Math.floor(Math.random() * 10) + 1,
                                 worthy = worthyAlg == 10 ? true : false;
@@ -4156,36 +4156,36 @@
                             }
 
                             if (inDjList) {
-                                for (var i = 0; i < basicBot.room.usersUsedRequebro.length; i++) {
-                                    if (basicBot.room.usersUsedRequebro[i].id == id) {
-                                        oldTime = basicBot.room.usersUsedRequebro[i].time;
-                                        usedRequebro = true;
-                                        indexArrUsedRequebro = i;
+                                for (var i = 0; i < basicBot.room.usersUsedDj.length; i++) {
+                                    if (basicBot.room.usersUsedDj[i].id == id) {
+                                        oldTime = basicBot.room.usersUsedDj[i].time;
+                                        useddj = true;
+                                        indexArrUseddj = i;
                                     }
                                 }
 
-                                if (usedRequebro) {
-                                    timeInMinutes = (basicBot.settings.requebroCooldown + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
-                                    requebroCd = timeInMinutes > 0 ? true : false;
-                                    if (requebroCd == false)
-                                        basicBot.room.usersUsedRequebro.splice(indexArrUsedRequebro, 1);
+                                if (useddj) {
+                                    timeInMinutes = (basicBot.settings.djCooldown + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
+                                    djCd = timeInMinutes > 0 ? true : false;
+                                    if (djCd == false)
+                                        basicBot.room.usersUsedDj.splice(indexArrUsedDj, 1);
                                 }
 
-                                if (requebroCd == false || usedRequebro == false) {
+                                if (djCd == false || useddj == false) {
                                     var user = {
                                         id: id,
                                         time: Date.now()
                                     };
-                                    basicBot.room.usersUsedRequebro.push(user);
+                                    basicBot.room.usersUsedDj.push(user);
                                 }
                             }
 
                             if (!inDjList) {
-                                return API.sendChat(subChat(basicBot.chat.requebroNotClose, {
+                                return API.sendChat(subChat(basicBot.chat.djNotClose, {
                                     name: from
                                 }));
-                            } else if (requebroCd) {
-                                return API.sendChat(subChat(basicBot.chat.requebrocd, {
+                            } else if (djCd) {
+                                return API.sendChat(subChat(basicBot.chat.djcd, {
                                     name: from,
                                     time: timeInMinutes
                                 }));
@@ -4194,13 +4194,13 @@
                             if (worthy) {
                                 if (API.getWaitListPosition(id) != 0)
                                     basicBot.userUtilities.moveUser(id, 1, false);
-                                API.sendChat(subChat(basicBot.chat.requebroWorthy, {
+                                API.sendChat(subChat(basicBot.chat.djWorthy, {
                                     name: from
                                 }));
                             } else {
                                 if (API.getWaitListPosition(id) != djlist.length - 1)
                                     basicBot.userUtilities.moveUser(id, djlist.length, false);
-                                API.sendChat(subChat(basicBot.chat.requebroNotWorthy, {
+                                API.sendChat(subChat(basicBot.chat.djNotWorthy, {
                                     name: from
                                 }));
                             }
