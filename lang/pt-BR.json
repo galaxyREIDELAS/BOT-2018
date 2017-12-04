@@ -131,7 +131,7 @@
    "timelimit":"@%%NAME%%, sua música tem duração maior que %%MAXLENGTH%% minutos. Você precisa ter permissão para tocar músicas longas.",
    "permissionownsong":"/me :up: @%%NAME%% tem permissão para tocar música de própria autoria!",
    "isblacklisted":"/me Essa música está na lista negra %%BLACKLIST%%! Pulando música...",
-   "isopen":"/me  A roleta foi iniciada!  Use !join para entrar @djs (Jogo onde um participante aleatório é movido para a posição %%POS%% na fila de espera):four_leaf_clover: ",
+   "isopen":"/me  A roleta foi iniciada!  Use !join para entrar @djs (Jogo onde um participante aleatório é movido para a posição %%POS%% na fila de espera) :four_leaf_clover: ",
    "setRoleta":"/me [@%%NAME%%] Posição da Roleta alterada para: %%POS%%",
    "killtroll":"/me [@%%NAME%%] Roleta desativada.",
    "winnerpicked":"/me Pelo visto @%%NAME%% ganhou posição %%POSITION%%. :boom: ",
