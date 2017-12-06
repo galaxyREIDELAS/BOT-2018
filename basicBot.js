@@ -204,7 +204,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: '-gαℓαxy',
+            botName: '!NightWolf',
             language: 'portuguese',
             chatLink: 'https://rawgit.com/GalaxyDELAS/BOT-2018/master/lang/pt-BR.json',
             scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
