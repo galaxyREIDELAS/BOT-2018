@@ -186,7 +186,7 @@
     };
 
     var botCreator = 'Yemasthui';
-    var botMaintainer = '-gαℓαxy';
+    var botMaintainer = 'null';
     var botCreatorIDs = [000000, 000000, 000000, 000000];
     var botHostIDs = [000000];
     var botRDJIDs = [000000];
@@ -194,7 +194,7 @@
     var basicBot = {
         version: '8.0 (10/10)',
         status: false,
-        name: '-gαℓαxy',
+        name: 'NightWolf',
         loggedInID: null,
         scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
         cmdLink: '',
@@ -204,7 +204,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: '!NightWolf',
+            botName: 'NightWolf',
             language: 'portuguese',
             chatLink: 'https://rawgit.com/GalaxyDELAS/BOT-2018/master/lang/pt-BR.json',
             scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
