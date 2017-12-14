@@ -186,7 +186,7 @@
     };
 
     var botCreator = 'Yemasthui';
-    var botMaintainer = 'null';
+    var botMaintainer = '-gαℓαxy';
     var botCreatorIDs = [000000, 000000, 000000, 000000];
     var botHostIDs = [000000];
     var botRDJIDs = [000000];
