@@ -185,7 +185,7 @@
         return str;
     };
 
-    var botCreator = 'null';
+    var botCreator = 'Yemasthui';
     var botMaintainer = 'null';
     var botCreatorIDs = [000000, 000000, 000000, 000000];
     var botHostIDs = [000000];
